@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="Untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.69" shadow-softness="1" camera-target="0.27m 0.7848m 0.28m" auto-rotate>
+      <button class="Hotspot" slot="hotspot-1" data-position="0.26310417624147964m 0.5625492576952451m 0.29554946188926245m" data-normal="0.5109253213085291m 0.5068194823131574m 0.6943265286546378m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Nariz</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="0.176767608572611m 0.4401081068657351m -0.26600599142170617m" data-normal="0.9150534145219931m 0.17524970612048327m -0.36326958182089203m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Orejas</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.31846113740369303m 0.3954036178259055m 0.22408215129210945m" data-normal="0.8163661776946265m 0.4795939981999977m 0.3217698879740091m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Boca</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/{{MODELVIEWER_VERSION}}/model-viewer.min.js"></script>
+  </body>
+</html>
